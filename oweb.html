@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Personal Blog</title>
+        <script language="JavaScript" src="PersonalBlog.js"></script>
+        <style type="text/css">
+        body{
+            background-color: rgb(156, 156, 156);
+            background-image: url(pic2.jpg);
+        }
+
+        .color{
+            color: cornsilk;
+        }
+
+        .color:hover{
+            color: yellow;
+        }
+        .column {
+            float: left;
+            width: 30%;
+            padding: 5px;
+}
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+}
+        .class1{
+            background-color: rgb(40, 133, 170);
+            font-size: larger;
+            float: left;
+            width: 100%;
+            padding: .2em;
+            margin-right:.5em;
+            margin-bottom: .5em;
+            border: 1px solid rgb(49, 5, 247);
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        ul li ol li{
+            text-align: center;
+        }
+        ul li ol li p{
+            text-align: left;
+        }
+
+        .right {
+            float: right;
+            margin-right: 300px;
+            width: 20%;
+            box-shadow: 25px 25px 50px rgb(1, 1, 51);
+            }
+        header.class{
+            background-color: rgb(91, 91, 92);
+            font-size: x-large;
+            text-align: center;
+            
+        }
+        p{
+            font-size: small;
+            font-family: Verdana, Tahoma, sans-serif;
+            text-align: justify;
+        }
+
+        ul li{
+            font-size: medium;
+        }
+        aside{
+            font-size: smaller;
+            text-decoration: underline;
+        }
+        p.class2{
+            text-decoration: underline;
+        }
+        a.shadow{
+            box-shadow: 25px 25px 50px rgb(6, 6, 88);
+            
+        }
+        .class4{
+            margin-left: 50px;
+            margin-top: 10px;
+            transition: transform 4s;
+            box-shadow: 25px 25px 50px black;
+            height: 100%;
+            
+
+        }
+        img.class4:hover{
+            transform: rotate(360deg) scale(2,2);
+        }
+        .box{
+            border-width: thick;
+            border-style: groove;
+            border-color: darkcyan;
+            padding: 10px;
+        }
+        ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.nav1 {
+  float: left;
+}
+
+li.nav1 a.nav2 {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.nav1 a.nav2:hover {
+  background-color: #111;
+}
+
+.fav{
+    background-color: blanchedalmond;
+    border-width: medium;
+    border-style: dotted;
+}
+
+.me{
+    background-color: rgb(243, 231, 243);
+    border-width: large;
+    border-style: double;
+}
+
+.anketa{
+    background-color: rgb(202, 182, 250);
+    border-width: medium;
+    border-style: groove;
+    
+}
+
+.kontakt{
+    background-color: rgb(202, 182, 250);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.background{
+    background-image: url(music.jpg);
+    
+}
+.background1{
+    background-image: url(tv.jpg);
+}
+
+.background2{
+    background-image: url(food.jpg);
+}
+.background3{
+    background-image: url(blog.png);
+}
+nav ul{
+    display: none;
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+nav:hover ul{
+    display: block;
+}
+
+nav.cl{
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.txt{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+p.com :hover{
+    color: rgb(4, 69, 245);
+}
+
+        </style>
+    </head>
+    <body>
+        <header class="class">
+            <h1>Daniela's Personal Blog</h1>
+            <ul class="nav">
+                <li class="nav1"><a href="#home" class="nav2">Почетна</a></li>
+                <li class="nav1">
+                <nav class="cl"> Омилени нешта
+                    <ul>
+                        <li><a href="#music" class="nav2">Музика</a></li>
+                        <li><a href="#tv" class="nav2">Серии</a></li>
+                        <li><a href="#restaurant" class="nav2">Ресторани</a></li>
+                    </ul>
+                </nav>
+                </li>
+                <li class="nav1"><a href="#gallery" class="nav2">Галерија</a></li>
+                <li class="nav1"><a href="#blog" class="nav2">Блог</a></li>
+                <li class="nav1"><a href="#anket" class="nav2">Анкета за посетители</a></li>
+                <li class="nav1"><a href="#contact" class="nav2">Контакт форма</a></li>
+              </ul>
+        </header>
+        
+        <section id="home">
+        <h1 class="class1"> Почетна </h1>
+        <img src="pic1.jpg" alt="Picture of me" height="125px" width="100px" class="class4">
+            <p class="me"><em><strong>Здраво, јас сум Даниела живеам во Велес и имам 21 година.Основно училиште имам завршено во ООУ."Благој Кирков", а средно училиште во СОУ."Гимназија Кочо Рацин"-Велес.Моментално сум студент на ФЕИТ, трета година.Мое омилено хоби е читање на книги, патување, слушање музика. </em></strong></p>
+        </section>
+
+        <section>
+            <h1 class="class1">Омилени нешта</h1>
+            <ul>
+                <li>
+                    <strong style="font-size: x-large;" id="music"> Моите 3 омилени песни се: </strong>
+                    <ol class="background">
+                        <br>
+                        <li class="color"><video controls height="250px" width="300px"><source src="prvo.webm" type="video/webm"></video><br>Tick Tock-Clean Bandit and Mabel</li><br>
+                        <li class="color"><video controls height="250px" width="300px"><source src="Ava.webm" type="video/webm"></video><br>Who's Laughing Now-Ava Max</li></a><br>
+                        <li class="color"><video controls height="250px" width="300px"><source src="Olivia.webm" type="video/webm"></video><br>I'm Lost-Olivia Adams</li></a><br>
+                    </ol>
+                </li>
+                <li>
+                    <strong style="font-size: x-large;" id="tv"> Моите 3 омилени серии се: </strong>
+                    
+                    <ol class="background1">
+                        <li>
+                            <p style="text-align: center; font-size: x-large;"><strong>Friends</strong></p>
+                            <p class="fav">ТВ серијата „Пријатели“ (англиски Friends) е наградувана американска комедија за група од шест пријатели кои живеат во Њујорк. Премиерно е прикажана од 1994 до 2004. Создадена е од Дејвид Крејн и Марта Кауфман, а продуцирана од Кевин С. Брајт, Марта Кауфман и Дејвид Крејн. Оваа серија е една од најпопуларните серии на сите времиња, и е прикажана во повеќе од 100 земји.</p>
+                            <a href="https://mk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D1%98%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_(%D0%A2%D0%92_%D1%81%D0%B5%D1%80%D0%B8%D1%98%D0%B0)"><img src="friends.jpg" alt="Friends cast" height="125px" width="200px"></a>
+                            <aside> За повеќе информации за оваа серија притисни на сликата.</aside>
+                        </li>
+                        <li>
+                            <p style="text-align: center; font-size: x-large;"><strong>La casa de papel</strong></p>
+                            <p class="fav">La casa de papel е Шпанска криминалистичка ТВ серија во која невообичаена група на крадци пробуваат да ја извршат најголемата кражба во Шпанската историја, да украдат 2,4 билиони евра од Royal Mint во Шпанија. </p>
+                            <a href="https://en.wikipedia.org/wiki/Money_Heist"><img src="heist.jpg" alt="La casa de papel" height="125px" width="200px"></a>
+                            <aside> За повеќе информации за оваа серија притисни на сликата.</aside>
+
+                        </li>
+                        <li>
+                            <p style="text-align: center; font-size: x-large;"><strong>Prison break</strong></p>
+                            <p class="fav"> Prison Break е американска телевизиска сериска драма создадена од Пол Шеуринг. Серијата се работи за двајца браќа, Линколн Бароус (Доминик Персел) и Мајкл Скофилд (Вентворт Милер); Бароус е осуден на смрт за злосторство што не го сторил, а Скофилд смислува начин за да му помогне на неговиот брат да избега од затвор и да ја докаже неговата невиност.</p>
+                            <a href="https://en.wikipedia.org/wiki/Prison_Break"><img src="prison.jpg" alt="Prison break" height="200px" width="175px"></a>
+                            <aside> За повеќе информации за оваа серија притисни на сликата.</aside>
+                        </li>
+                    </ol>
+
+                </li>
+
+                <li>
+                    <strong style="font-size: x-large;" id="restaurant">Мои 3 омилени локални ресторани</strong>
+                    <ol class="background2">
+                        <li>
+                            <p style="text-align: center; font-size: x-large;"><strong>Бела Вода</strong></p>
+                            <a href="https://www.facebook.com/restoranbelavoda"><img src="belavoda.jpg"  alt="Bela Voda" height="125px" width="200px" class="box"></a>
+                        </li>
+                        <li>
+                            <p style="text-align: center; font-size: x-large;"><strong>Мари</strong></p>
+                            <a href="https://www.facebook.com/mariloungeandbar"><img src="mari.jpg" alt="Mari" height="125px" width="200px" class="box"></a>
+                        </li>
+                        <li>
+                            <p style="text-align: center; font-size: x-large;"><strong>Гардениа</strong></p>
+                            <a href="https://www.facebook.com/HotelGardeniaMK"><img src="gardenia.jpg" alt="Gardenia" height="175px" width="200px" class="box"></a>
+                        </li>
+
+                    </ol>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section id="gallery">
+            <h1 class="class1">Галерија</h1>
+    
+                <p id="gradovi">
+                    <p id="l1" class="com"><b>Leave a comment</b></p>
+                    <div id="c"></div> 
+
+                    <div id="slika1" class="container">
+                    <img src="black.jpg" alt="Black picture" style="border-radius: 50%;" height="125px" width="200px">
+                    <div class="txt">Градови</div>
+                    </div>
+  
+                </p>
+
+                <p id="zivotni">
+                    <p id="l2" class="com"><b>Leave a comment</b></p>
+                    <div id="c1"></div> 
+
+                    <div id="slika2" class="container">
+                    <img src="black.jpg" alt="Black picture" style="border-radius: 50%;" height="125px" width="200px">
+                    <div class="txt">Животни</div>
+                    </div>
+                </p>
+
+        </section>
+
+        <section id="blog" class="background3">
+            <h1 class="class1">Блог</h1>
+            <article>
+                <header> From <a href="https://citajkniga.mk/blogs/%D0%B1%D0%BB%D0%BE%D0%B3/%D0%B6%D0%B5%D0%BD%D0%B0%D1%82%D0%B0-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D0%B5%D1%86%D0%BE%D1%82-%D0%B0-%D1%9F-%D1%84%D0%B8%D0%BD"> Читај книга </a></header>
+                <h1 style="text-align: center">Жената на прозорецот</h1>
+                <p>Лично до сега еден од ретките трилери кои ме наежиле додека ги читам во буквална смисла. Се работи за една жена која е затвореник во својата куќа, на која животот и го сервирал најлошото. Живее на нездрав начин со многу вино и поради својата состојба со многу лекови и регуларни посети од нејзиниот пхсихијатар како и киропрактичар. Книга во која се опишува нејзиниот регуларен живот, како и злосторството на кое она е сведок од својот прозорец додека ги шпионира своите соседи. Но, сепак кога го пријавува тоа се' е игнорирано поради заклучокот дека таа халуцинира поради тоа што пие доста лекови кои го предизвикуваат тоа и како нејзина мала тајна, она ги меша со вино, што знае дека не треба.</p>
+                <p>Но главното прашање што се поставува е тоа ‘’Што е вистина, а што е халуцинација‘’?</p>
+                <p>Добра порака на авторот е дека кога нешто се испитува, потребно е да се испита до сам крај, без да се базира тоа на заклучоци според внатрешните фактори на самата личност што анализира и да се даде шанса на сите, без разлика во која состојба се.</p>
+                <p>Дефинитивно трилер и драма што вреди да се прочита, како и што е познато за ова ремек дело, во иднина веќе е најавен и филм.</p>
+                <p>Оценка:<strong>5/5</strong></p>          
+            </article>
+
+            <form method="post" action="#">
+             <p>
+                Koја е вашата оценка за оваа книга:
+                <label>
+                    1
+                    <input type="range" min="1" max="5" value="5"/>
+                    5
+                </label>
+
+            </p>
+            <p class="class2">
+                <img id="image" src="kniga.jpg" height="350px" width="250px" class="right" >
+                <mark>Ваша рецензија и мислење за книгата:</mark><br>
+                <label>
+                    <textarea id="re" name="comment" rows="10" cols="50" placeholder="Enter comment here."></textarea>
+                </label><br>
+                <p id="kn"></p>
+                <p>
+                <button type="button" onclick="recenzija()">Submit</button>
+                <input type="reset" value="Clear"/>
+                </p>
+
+                <p><mark>За која книга би сакале да биде наредниот блог:</mark><br></p>
+                <label>
+                    <textarea id="vnes" name="comment" rows="10" cols="50" placeholder="Enter suggestion here."></textarea>
+                </label><br>
+                <p id="bl"></p>
+            </p>
+            <p>
+                <button type="button" onclick="blog()">Submit</button>
+                <input type="reset" value="Clear"/>
+            </p>
+            </form>
+        </section>
+
+        <section id="anket" class="anketa">
+            <h1 class="class1">Анкета за посетители</h1>
+            <form method="post" action="">
+                <p>
+                    <label> <strong>Која е твојата оцена за оваа веб страна: </strong>
+                        <select name="rating">
+                            <option>10</option>
+                            <option>9</option>
+                            <option>8</option>
+                            <option>7</option>
+                            <option>6</option>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+                        (10-најдобро 1-најлошо)
+                    </label>
+                </p>
+
+                <p>
+                    <strong>Како дозна за оваа веб страна:</strong>
+                    <label> Друга веб страна
+                        <input type="checkbox" name="fromwhere" value="website">
+                    </label>
+                    <label> Социјални мрежи
+                        <input type="checkbox" name="fromwhere" value="app">
+                    </label>
+                    <label> Search engine
+                        <input type="checkbox" name="fromwhere" value="search engine">
+                    </label>
+                    <label> Преку пријател
+                        <input type="checkbox" name="fromwhere" value="friend">
+                    </label>
+                    <label> Друго
+                        <input type="checkbox" name="fromwhere" value="other">
+                    </label>
+                </p>
+
+                <p>
+                    <strong> Пофалба/Критика: </strong><br>
+                    <label>
+                        <textarea name="comment" rows="5" cols="35" placeholder="Enter comment here."></textarea>
+                    </label>
+                </p>
+                <p>
+                    <strong>Кој ја прави оваа анкета: </strong>
+                    <label> Име: 
+                        <input type="text" name="name" size="20">
+                    </label>
+
+                    <label> Е-mail: 
+                        <input type="text" name="e-mail" size="40" placeholder="name@domain.com">
+                    </label>
+                </p>
+
+                <p>
+                    <input type="submit" value="Submit"/>
+                    <input type="reset" value="Clear"/>
+                </p>
+            </form>
+
+        </section>
+
+        <section id="contact">
+            <h1 class="class1"> Контакт форма </h1>
+            <p class="kontakt">Можете да ме контактирате на:<br>
+            <a href="https://www.facebook.com/dvasileska.14"><img src="fb.png" alt="Facebook" height="50px" width="100px"></a><br>
+            <a href="https://www.instagram.com/vasileska_daniela/?hl=en"><img src="insta.jpg" alt="Instagram" height="50px" width="100px"></a></p>
+            <p class="kontakt">Исто така може да ме исконтактирате и на <a href="mailto:vasileskadaniela@yahoo.com">e-mail</a></p>
+
+        </section>
+    </body>
+</html>
