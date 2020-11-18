@@ -138,14 +138,14 @@ function blog()
 {
     var b=document.getElementById("knigaime").value;
     var b1=document.getElementById("vnes").value;
-    document.getElementById("bl").innerHTML+=b+":\t"+b1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("bl").innerHTML+="<b>"+b+":</b>\t"+b1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 
 }
 function recenzija()
 {
     var r=document.getElementById("blogime").value;
     var r1=document.getElementById("re").value;
-    document.getElementById("kn").innerHTML+=r+": \t"+r1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("kn").innerHTML+="<b>"+r+":</b> \t"+r1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 
 function comment()
