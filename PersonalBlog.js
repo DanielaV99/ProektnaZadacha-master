@@ -136,46 +136,48 @@ function comm1()
 
 function blog()
 {
+    var b=document.getElementById("knigaime").value;
     var b1=document.getElementById("vnes").value;
-    document.getElementById("bl").innerHTML+=b1+"<br>"+date.toLocaleString()+"<br>";
+    document.getElementById("bl").innerHTML+=b+":\t"+b1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 
 }
 function recenzija()
 {
+    var r=document.getElementById("blogime").value;
     var r1=document.getElementById("re").value;
-    document.getElementById("kn").innerHTML+=r1+"<br>"+date.toLocaleString()+"<br>";
+    document.getElementById("kn").innerHTML+=r+": \t"+r1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 
 function comment()
 {
     var sl=document.getElementById("ta").value;
-    document.getElementById("pa").innerHTML+="<b>"+sl+"</b>"+"\t"+date.toLocaleString()+"<br>";
+    document.getElementById("pa").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 function comment1()
 {
     var sl=document.getElementById("ta1").value;
-    document.getElementById("a").innerHTML+="<b>"+sl+"</b>"+"\t"+date.toLocaleString()+"<br>";
+    document.getElementById("a").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 
 function comment2()
 {
     var sl=document.getElementById("ta2").value;
-    document.getElementById("l").innerHTML+="<b>"+sl+"</b>"+"\t"+date.toLocaleString()+"<br>";
+    document.getElementById("l").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 function comment11()
 {
     var sl=document.getElementById("ta11").value;
-    document.getElementById("t").innerHTML+="<b>"+sl+"</b>"+"\t"+date.toLocaleString()+"<br>";
+    document.getElementById("t").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 function comment12()
 {
     var sl=document.getElementById("ta12").value;
-    document.getElementById("z").innerHTML+="<b>"+sl+"</b>"+"\t"+date.toLocaleString()+"<br>";
+    document.getElementById("z").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 function comment13()
 {
     var sl=document.getElementById("ta13").value;
-    document.getElementById("s").innerHTML+="<b>"+sl+"</b>"+"\t"+date.toLocaleString()+"<br>";
+    document.getElementById("s").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
 }
 
 var klikovi=0;
@@ -264,6 +266,11 @@ function swap()
    iconImg=document.getElementById("image")
    iconImg.setAttribute( "src", opcii[index] + ".jpg" );
    
+}
+
+function anket()
+{
+    window.alert("Успешно направена анкета!");
 }
 
 
