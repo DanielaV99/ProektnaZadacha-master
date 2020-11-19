@@ -19,22 +19,28 @@ function start()
 
 }
 
+function dato()
+{
+    var d=parseInt(date.getMonth())+1;
+    return d;
+}
+
 function gallery()
 {
     var insta=document.getElementById("gradovi");
     insta.innerHTML="<div class='row'>"+
         "<div class='column'>"+
-          "<img src='paris.jpg' alt='Paris' height='300px' style='width:100%'>"+
+          "<img class='gallery' src='paris.jpg' alt='Paris' height='300px' style='width:100%'>"+
           "<p id='paris'></p>"+
           "<p id='dparis'></p>"+
         "</div>"+
         "<div class='column'>"+
-          "<img src='amsterdam.jpg' alt='Amsterdam' style='width:100%'>"+
+          "<img class='gallery' src='amsterdam.jpg' alt='Amsterdam' style='width:100%'>"+
           "<p id='amsterdam'></p>"+
           "<p id='damsterdam'></p>"+
         "</div>"+
         "<div class='column'>"+
-          "<img src='london.jpg' alt='London' height='300px' style='width:100%'>"+
+          "<img class='gallery' src='london.jpg' alt='London' height='300px' style='width:100%'>"+
           "<p id='london'></p>"+
           "<p id='dlondon'></p>"+
         "</div>"+
@@ -47,17 +53,17 @@ function gallery1()
     var insta1=document.getElementById("zivotni");
     insta1.innerHTML='<div class="row">'+
         '<div class="column">'+
-          '<img src="tigar.jpg" alt="Tiger" style="width:100%">'+
+          '<img class="gallery" src="tigar.jpg" alt="Tiger" style="width:100%">'+
           "<p id='tigar'></p>"+
           "<p id='dtigar'></p>"+
         '</div>'+
         '<div class="column">'+
-          '<img src="zirafa.jpg" alt="Giraffe" style="width:100%">'+
+          '<img class="gallery" src="zirafa.jpg" alt="Giraffe" style="width:100%">'+
           "<p id='zirafa'></p>"+
           "<p id='dzirafa'></p>"+
         '</div>'+
         '<div class="column">'+
-          '<img src="slon.jpg" alt="Elephant" height="270px" style="width:100%">'+
+          '<img class="gallery" src="slon.jpg" alt="Elephant" height="270px" style="width:100%">'+
           "<p id='slon'></p>"+
           "<p id='dslon'></p>"+
         '</div>'+
@@ -138,46 +144,46 @@ function blog()
 {
     var b=document.getElementById("knigaime").value;
     var b1=document.getElementById("vnes").value;
-    document.getElementById("bl").innerHTML+="<b>"+b+":</b>\t"+b1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("bl").innerHTML+="<b>"+b+":</b>\t"+b1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 
 }
 function recenzija()
 {
     var r=document.getElementById("blogime").value;
     var r1=document.getElementById("re").value;
-    document.getElementById("kn").innerHTML+="<b>"+r+":</b> \t"+r1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("kn").innerHTML+="<b>"+r+":</b> \t"+r1+"<br>"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 }
 
 function comment()
 {
     var sl=document.getElementById("ta").value;
-    document.getElementById("pa").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("pa").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 }
 function comment1()
 {
     var sl=document.getElementById("ta1").value;
-    document.getElementById("a").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("a").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 }
 
 function comment2()
 {
     var sl=document.getElementById("ta2").value;
-    document.getElementById("l").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("l").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 }
 function comment11()
 {
     var sl=document.getElementById("ta11").value;
-    document.getElementById("t").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("t").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 }
 function comment12()
 {
     var sl=document.getElementById("ta12").value;
-    document.getElementById("z").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("z").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 }
 function comment13()
 {
     var sl=document.getElementById("ta13").value;
-    document.getElementById("s").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+"<br>";
+    document.getElementById("s").innerHTML+="<b>"+sl+"</b>"+"\t"+date.getHours()+":"+date.getMinutes()+"\t"+date.getDate()+"/"+dato()+"/"+date.getFullYear()+"<br>";
 }
 
 var klikovi=0;
@@ -265,7 +271,6 @@ function swap()
    var index=Math.floor(Math.random()*2);
    iconImg=document.getElementById("image")
    iconImg.setAttribute( "src", opcii[index] + ".jpg" );
-   
 }
 
 function anket()
