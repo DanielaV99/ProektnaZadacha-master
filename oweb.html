@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Personal Blog</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script language="JavaScript" src="PersonalBlog.js"></script>
         <style type="text/css">
         body{
@@ -244,20 +245,20 @@ img.gallery{
                         <li>
                             <p style="text-align: center; font-size: x-large;"><strong>Friends</strong></p>
                             <p class="fav">ТВ серијата „Пријатели“ (англиски Friends) е наградувана американска комедија за група од шест пријатели кои живеат во Њујорк. Премиерно е прикажана од 1994 до 2004. Создадена е од Дејвид Крејн и Марта Кауфман, а продуцирана од Кевин С. Брајт, Марта Кауфман и Дејвид Крејн. Оваа серија е една од најпопуларните серии на сите времиња, и е прикажана во повеќе од 100 земји.</p>
-                            <a href="https://mk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D1%98%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_(%D0%A2%D0%92_%D1%81%D0%B5%D1%80%D0%B8%D1%98%D0%B0)"><img src="friends.jpg" alt="Friends cast" height="125px" width="200px"></a>
+                            <img onclick="serija1()" src="friends.jpg" alt="Friends cast" height="125px" width="200px">
                             <aside> За повеќе информации за оваа серија притисни на сликата.</aside>
                         </li>
                         <li>
                             <p style="text-align: center; font-size: x-large;"><strong>La casa de papel</strong></p>
                             <p class="fav">La casa de papel е Шпанска криминалистичка ТВ серија во која невообичаена група на крадци пробуваат да ја извршат најголемата кражба во Шпанската историја, да украдат 2,4 билиони евра од Royal Mint во Шпанија. </p>
-                            <a href="https://en.wikipedia.org/wiki/Money_Heist"><img src="heist.jpg" alt="La casa de papel" height="125px" width="200px"></a>
+                            <img onclick="serija2()" src="heist.jpg" alt="La casa de papel" height="125px" width="200px">
                             <aside> За повеќе информации за оваа серија притисни на сликата.</aside>
 
                         </li>
                         <li>
                             <p style="text-align: center; font-size: x-large;"><strong>Prison break</strong></p>
                             <p class="fav"> Prison Break е американска телевизиска сериска драма создадена од Пол Шеуринг. Серијата се работи за двајца браќа, Линколн Бароус (Доминик Персел) и Мајкл Скофилд (Вентворт Милер); Бароус е осуден на смрт за злосторство што не го сторил, а Скофилд смислува начин за да му помогне на неговиот брат да избега од затвор и да ја докаже неговата невиност.</p>
-                            <a href="https://en.wikipedia.org/wiki/Prison_Break"><img src="prison.jpg" alt="Prison break" height="200px" width="175px"></a>
+                            <img onclick="serija3()" src="prison.jpg" alt="Prison break" height="200px" width="175px">
                             <aside> За повеќе информации за оваа серија притисни на сликата.</aside>
                         </li>
                     </ol>
@@ -269,15 +270,15 @@ img.gallery{
                     <ol class="background2">
                         <li>
                             <p style="text-align: center; font-size: x-large;"><strong>Бела Вода</strong></p>
-                            <a href="https://www.facebook.com/restoranbelavoda"><img src="belavoda.jpg"  alt="Bela Voda" height="125px" width="200px" class="box"></a>
+                            <img onclick="belavoda()" src="belavoda.jpg"  alt="Bela Voda" height="125px" width="200px" class="box">
                         </li>
                         <li>
                             <p style="text-align: center; font-size: x-large;"><strong>Мари</strong></p>
-                            <a href="https://www.facebook.com/mariloungeandbar"><img src="mari.jpg" alt="Mari" height="125px" width="200px" class="box"></a>
+                            <img onclick="mari()" src="mari.jpg" alt="Mari" height="125px" width="200px" class="box">
                         </li>
                         <li>
                             <p style="text-align: center; font-size: x-large;"><strong>Гардениа</strong></p>
-                            <a href="https://www.facebook.com/HotelGardeniaMK"><img src="gardenia.jpg" alt="Gardenia" height="175px" width="200px" class="box"></a>
+                            <img onclick="gardenia()" src="gardenia.jpg" alt="Gardenia" height="175px" width="200px" class="box">
                         </li>
 
                     </ol>
@@ -336,13 +337,13 @@ img.gallery{
 
             </p>
             <p class="class2">
-                <img id="image" src="kniga.jpg" height="350px" width="250px" class="right" >
+                <img id="image" src="kniga.jpg" height="350px" width="250px" class="right" onclick="swap('image','kniga.jpg','knigazadna.jpg')">
                 <mark>Ваша рецензија и мислење за книгата:</mark><br>
                 <label>
-                    <textarea id="re" name="comment" rows="10" cols="50" placeholder="Enter comment here."></textarea>
+                    <textarea onfocusin="change(this)" onfocusout="change1(this)" id="re" name="comment" rows="10" cols="50" placeholder="Enter comment here."></textarea>
                 </label><br>
                 <p id="kn"></p>
-                 Име: <input id="blogime" name="Name" type="text">
+                 Име: <input onfocusin="change(this)" onfocusout="change1(this)" id="blogime" name="Name" type="text">
                 <p>
                 <button type="button" onclick="recenzija()">Submit</button>
                 <input type="reset" value="Clear"/>
@@ -350,11 +351,11 @@ img.gallery{
 
                 <p><mark>За која книга би сакале да биде наредниот блог:</mark><br></p>
                 <label>
-                    <textarea id="vnes" name="comment" rows="10" cols="50" placeholder="Enter suggestion here."></textarea>
+                    <textarea onfocusin="change(this)" onfocusout="change1(this)" id="vnes" name="comment" rows="10" cols="50" placeholder="Enter suggestion here."></textarea>
                 </label><br>
                 <p id="bl"></p>
             </p>
-            Име: <input id="knigaime" name="book" type="text">
+            Име: <input onfocusin="change(this)" onfocusout="change1(this)" id="knigaime" name="book" type="text">
             <p>
                 <button type="button" onclick="blog()">Submit</button>
                 <input type="reset" value="Clear"/>
@@ -405,17 +406,17 @@ img.gallery{
                 <p>
                     <strong> Пофалба/Критика: </strong><br>
                     <label>
-                        <textarea name="comment" rows="5" cols="35" placeholder="Enter comment here."></textarea>
+                        <textarea onfocusin="change(this)" onfocusout="change1(this)" name="comment" rows="5" cols="35" placeholder="Enter comment here."></textarea>
                     </label>
                 </p>
                 <p>
                     <strong>Кој ја прави оваа анкета: </strong>
                     <label> Име: 
-                        <input type="text" name="name" size="20">
+                        <input onfocusin="change(this)" onfocusout="change1(this)" type="text" name="name" size="20">
                     </label>
 
                     <label> Е-mail: 
-                        <input type="text" name="e-mail" size="40" placeholder="name@domain.com">
+                        <input onfocusin="change(this)" onfocusout="change1(this)" type="text" name="e-mail" size="40" placeholder="name@domain.com">
                     </label>
                 </p>
 
@@ -430,8 +431,8 @@ img.gallery{
         <section id="contact">
             <h1 class="class1"> Контакт форма </h1>
             <p class="kontakt">Можете да ме контактирате на:<br>
-            <a href="https://www.facebook.com/dvasileska.14"><img src="fb.png" alt="Facebook" height="50px" width="100px"></a><br>
-            <a href="https://www.instagram.com/vasileska_daniela/?hl=en"><img src="insta.jpg" alt="Instagram" height="50px" width="100px"></a></p>
+            <img onclick="fb()" src="fb.png" alt="Facebook" height="50px" width="100px"><br>
+            <img onclick="insta()" src="insta.jpg" alt="Instagram" height="50px" width="100px"></p>
             <p class="kontakt">Исто така може да ме исконтактирате и на <a href="mailto:vasileskadaniela@yahoo.com">e-mail</a></p>
 
         </section>
