@@ -4,7 +4,43 @@
         <meta charset="utf-8">
         <title>Personal Blog</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-3.1.0.js"></script>
+        <script>
+            $(document).ready(function(){
+            $('#image1').on('click', function() {
+  $('#overlay')
+    .css({backgroundImage: `url(${this.src})`})
+    .addClass('open')
+    .one('click', function() { $(this).removeClass('open'); });
+});
+$('#image2').on('click', function() {
+  $('#overlay')
+    .css({backgroundImage: `url(${this.src})`})
+    .addClass('open')
+    .one('click', function() { $(this).removeClass('open'); });
+});
+$('#image3').on('click', function() {
+  $('#overlay')
+    .css({backgroundImage: `url(${this.src})`})
+    .addClass('open')
+    .one('click', function() { $(this).removeClass('open'); });
+});
+$('#image4').on('click', function() {
+  $('#overlay')
+    .css({backgroundImage: `url(${this.src})`})
+    .addClass('open')
+    .one('click', function() { $(this).removeClass('open'); });
+});
+$('#image5').on('click', function() {
+  $('#overlay')
+    .css({backgroundImage: `url(${this.src})`})
+    .addClass('open')
+    .one('click', function() { $(this).removeClass('open'); });
+});
+});
+        </script>
         <script language="JavaScript" src="PersonalBlog.js"></script>
+        <script language="JavaScript" src="comment.js"></script>
         <style type="text/css">
         body{
             background-color: rgb(156, 156, 156);
@@ -196,6 +232,50 @@ p.com :hover{
 img.gallery{
     box-shadow: 25px 25px 50px rgb(78, 125, 252);
 }
+#overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.8) none 50% / contain no-repeat;
+  cursor: pointer;
+  transition: 0.3s;
+  
+  visibility: hidden;
+  opacity: 0;
+}
+#overlay.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+#overlay:after { 
+  content: "\2715";
+  position: absolute;
+  color:#fff;
+  top: 10px;
+  right:20px;
+  font-size: 2em;
+}
+
+.komentari{
+  background-color: lightgrey;
+  width: 250px;
+  border: 7px solid blue;
+  padding-left: 20px;
+  margin: 20px;
+    
+}
+
+.komentari1{
+  background-color: lightgrey;
+  width: 250px;
+  border: 7px solid yellow;
+  padding-left: 20px;
+  margin: 20px;
+    
+}
 
         </style>
     </head>
@@ -292,23 +372,119 @@ img.gallery{
             <h1 class="class1">Галерија</h1>
     
                 <p id="gradovi">
-                    <p id="l1" class="com"><b>Leave a comment</b></p>
-                    <div id="c"></div> 
-
                     <div id="slika1" class="container">
-                    <img src="black.jpg" alt="Black picture" style="border-radius: 50%;" height="125px" width="200px">
-                    <div class="txt">Градови</div>
+                        <img src="black.jpg" alt="Black picture" style="border-radius: 50%;" height="125px" width="200px">
+                        <div class="txt">Градови</div>
                     </div>
-  
+                    <div class='row'>
+                        <div class='column'>
+                          <img class='gallery' src='paris.jpg' alt='Paris' height='300px' style='width:100%'>
+                          <p id='paris'></p>
+                          <p id='dparis'></p>
+                        </div>
+                        <div class='column'>
+                          <img class='gallery' src='amsterdam.jpg' alt='Amsterdam' style='width:100%'>
+                          <p id='amsterdam'></p>
+                          <p id='damsterdam'></p>
+                        </div>
+                        <div class='column'>
+                          <img class='gallery' src='london.jpg' alt='London' height='300px' style='width:100%'>"+
+                          <p id='london'></p>
+                          <p id='dlondon'></p>
+                        </div>
+                      </div>
+                    <p id="l1" class="com"><b>Leave a comment</b></p>
+                    <div class="row">
+                        
+                        <div class="column">
+                            <div id="pa" class="komentari" ></div>
+                            <p><label>Comments:<br>
+                            <textarea onfocusin="change(this)" onfocusout="change1(this)" id="ta" name="comments" rows="4" cols="30" placeholder="Enter comment here."></textarea>
+                            <button id="b1" type="button"><img src="comment.png" alt="Enter" height="25" width="25"></button>
+                            <button type="button" onclick="like()"><img src="like.png" alt="Like" height="25" width="25"></button>
+                            <button type="button" onclick="dislike()"><img src="dislike.jpg" alt="Like" height="25" width="25"></button>
+                        </label></p>
+                        </div>
+                        
+                        <div class="column">
+                            <div id="a" class="komentari"></div>
+                            <p><label>Comments:<br>
+                            <textarea onfocusin="change(this)" onfocusout="change1(this)" id="ta1" name="comments" rows="4" cols="30" placeholder="Enter comment here."></textarea>
+                            <button id="b2" type="button" onclick="comment1()"><img src="comment.png" alt="Enter" height="25" width="25"></button>
+                            <button type="button" onclick="like1()"><img src="like.png" alt="Like" height="25" width="25"></button>
+                            <button type="button" onclick="dislike1()"><img src="dislike.jpg" alt="Like" height="25" width="25"></button>
+                       </label></p>
+                        </div>
+                        
+                        <div class="column">
+                            <div id="l" class="komentari"></div>
+                            <p><label>Comments:<br>
+                            <textarea onfocusin="change(this)" onfocusout="change1(this)" id="ta2" name="comments" rows="4" cols="30" placeholder="Enter comment here."></textarea>
+                            <button id="b3" type="button" onclick="comment2()"><img src="comment.png" alt="Enter" height="25" width="25"></button>
+                            <button type="button" onclick="like2()"><img src="like.png" alt="Like" height="25" width="25"></button>
+                            <button type="button" onclick="dislike2()"><img src="dislike.jpg" alt="Like" height="25" width="25"></button>
+                        </label></p>
+                        </div>
+                    </div>
+
                 </p>
 
                 <p id="zivotni">
-                    <p id="l2" class="com"><b>Leave a comment</b></p>
-                    <div id="c1"></div> 
-
                     <div id="slika2" class="container">
-                    <img src="black.jpg" alt="Black picture" style="border-radius: 50%;" height="125px" width="200px">
-                    <div class="txt">Животни</div>
+                        <img src="black.jpg" alt="Black picture" style="border-radius: 50%;" height="125px" width="200px">
+                        <div class="txt">Животни</div>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                              <img class="gallery" src="tigar.jpg" alt="Tiger" style="width:100%">
+                              <p id='tigar'></p>
+                              <p id='dtigar'></p>
+                            </div>
+                            <div class="column">
+                              <img class="gallery" src="zirafa.jpg" alt="Giraffe" style="width:100%">
+                              <p id='zirafa'></p>
+                              <p id='dzirafa'></p>
+                        </div>'+
+                            <div class="column">
+                              <img class="gallery" src="slon.jpg" alt="Elephant" height="270px" style="width:100%">
+                              <p id='slon'></p>
+                              <p id='dslon'></p>
+                            </div>
+                          </div>
+                    <p id="l2" class="com"><b>Leave a comment</b></p>
+                    <div class="row">
+                        
+                        <div class="column">
+                            <div id="t" class="komentari"></div>
+                            <p><label>Comments:<br>
+                            <textarea onfocusin="change(this)" onfocusout="change1(this)" id="ta11" name="comments" rows="4" cols="30" placeholder="Enter comment here."></textarea>
+                            <button  id="b4" type="button" onclick="comment11()"><img src="comment.png" alt="Enter" height="25" width="25"></button>
+                            <button type="button" onclick="like11()"><img src="like.png" alt="Like" height="25" width="25"></button>
+                            <button type="button" onclick="dislike11()"><img src="dislike.jpg" alt="Like" height="25" width="25"></button>
+                        </label></p>
+                        </div>
+                        
+                       
+                        <div class="column">
+                            <div id="z" class="komentari"></div>
+                            <p><label>Comments:<br>
+                            <textarea onfocusin="change(this)" onfocusout="change1(this)" id="ta12" name="comments" rows="4" cols="30" placeholder="Enter comment here."></textarea>
+                            <button id="b5" type="button" onclick="comment12()"><img src="comment.png" alt="Enter" height="25" width="25"></button>
+                            <button type="button" onclick="like12()"><img src="like.png" alt="Like" height="25" width="25"></button>
+                            <button type="button" onclick="dislike12()"><img src="dislike.jpg" alt="Like" height="25" width="25"></button>
+                       </label></p>
+                        </div>
+                        
+                        
+                        <div class="column">
+                            <div id="s" class="komentari"></div>
+                            <p><label>Comments:<br>
+                            <textarea onfocusin="change(this)" onfocusout="change1(this)" id="ta13" name="comments" rows="4" cols="30" placeholder="Enter comment here."></textarea>
+                            <button  id="b6" type="button" onclick="comment13()"><img src="comment.png" alt="Enter" height="25" width="25"></button>
+                            <button type="button" onclick="like13()"><img src="like.png" alt="Like" height="25" width="25"></button>
+                            <button type="button" onclick="dislike13()"><img src="dislike.jpg" alt="Like" height="25" width="25"></button>
+                        </label></p>
+                        </div>
                     </div>
                 </p>
 
@@ -342,25 +518,38 @@ img.gallery{
                 <label>
                     <textarea onfocusin="change(this)" onfocusout="change1(this)" id="re" name="comment" rows="10" cols="50" placeholder="Enter comment here."></textarea>
                 </label><br>
-                <p id="kn"></p>
                  Име: <input onfocusin="change(this)" onfocusout="change1(this)" id="blogime" name="Name" type="text">
                 <p>
-                <button type="button" onclick="recenzija()">Submit</button>
+                <button id="brec" type="button">Submit</button>
                 <input type="reset" value="Clear"/>
+                <p id="kn" class="komentari1"></p>
                 </p>
 
                 <p><mark>За која книга би сакале да биде наредниот блог:</mark><br></p>
                 <label>
                     <textarea onfocusin="change(this)" onfocusout="change1(this)" id="vnes" name="comment" rows="10" cols="50" placeholder="Enter suggestion here."></textarea>
                 </label><br>
-                <p id="bl"></p>
             </p>
             Име: <input onfocusin="change(this)" onfocusout="change1(this)" id="knigaime" name="book" type="text">
             <p>
-                <button type="button" onclick="blog()">Submit</button>
+                <button id="naredna" type="button">Submit</button>
                 <input type="reset" value="Clear"/>
+                <p id="kn1" class="komentari1"></p>
             </p>
             </form>
+
+            <div>
+                <p style="font-size: medium; text-align: center;"><b>Предлог книги:</b></p>
+               <div style=" text-align: center;">
+                <div id="overlay"></div>
+                <img id="image1" src="Patnik-23.jpg" height="350px" width="250px" onclick="swap('image1','Patnik-23.jpg','Patnik-23-back.jpg')">
+                <img id="image2" src="Patnicite.jpg" height="350px" width="250px"  onclick="swap('image2','Patnicite.jpg','Patnicite-back.jpg')">
+                <img id="image3" src="Triptih.jpg" height="350px" width="250px"  onclick="swap('image3','Triptih.jpg','Triptih-back.jpg')">
+                <img id="image4" src="Ubavi-devojki.jpg" height="350px" width="250px"  onclick="swap('image4','Ubavi-devojki.jpg','Ubavi-devojki-back.jpg')">
+                <img id="image5" src="F1.jpg" height="350px" width="250px"  onclick="swap('image5','F1.jpg','F1-back.jpg')">
+               </div>
+            </div>
+
         </section>
 
         <section id="anket" class="anketa">
